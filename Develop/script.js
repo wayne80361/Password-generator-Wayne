@@ -9,6 +9,10 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   uselowerCase();
+  useUpperCase();
+  useSpecialChar();
+  useNumChar();
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -28,8 +32,9 @@ function generatePassword() {
   return generatePassword();
 }
 
+// are we using lowercase characters?
 function uselowerCase() {
-  // are we using lowercase characters?
+  // --yes? put the lowercase characters into our list of chosen characters
   if (confirm("Would you like to use lowercase in the password?")) {
     return 0;
   } else {
@@ -37,11 +42,39 @@ function uselowerCase() {
   }
 }
 
-function useUpperCase() {}
-// --yes? put the lowercase characters into our list of chosen characters
 // are we using uppercase characters?
+function useUpperCase() {
+  if (
+    confirm("How about Uppercase? Would you like it to be in the password?")
+  ) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
 // are we using special characters?
+function useSpecialChar() {
+  if (
+    confirm(
+      "Specials!! They are great for security, would you like blend some?"
+    )
+  ) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
 // are we using numerical characters?
+function useNumChar() {
+  if (confirm("Numerical? Would you like to mix them into the password?")) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
 // based on the chosen length select random characters from the chosen characters set and put them in the password
 
 // var password = "password";
