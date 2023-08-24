@@ -1,3 +1,7 @@
+var alphabetChar = "abcdefghijklmnopqrstuvwxyz".split("");
+var numChar = "0123456789".split("");
+var specialChar = "~!@#$%^&*()_+-=".split("");
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -32,6 +36,8 @@ function uselowerCase() {
     return 1;
   }
 }
+
+function useUpperCase() {}
 // --yes? put the lowercase characters into our list of chosen characters
 // are we using uppercase characters?
 // are we using special characters?
