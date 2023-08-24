@@ -35,44 +35,33 @@ function generatePassword() {
 // are we using lowercase characters?
 function uselowerCase() {
   // --yes? put the lowercase characters into our list of chosen characters
-  if (confirm("Would you like to use lowercase in the password?")) {
-    return 0;
-  } else {
-    return 1;
-  }
+  var lowerCase = confirm("Would you like to use lowercase in the password?");
+
+  console.log(lowerCase);
 }
 
 // are we using uppercase characters?
 function useUpperCase() {
-  if (
-    confirm("How about Uppercase? Would you like it to be in the password?")
-  ) {
-    return 0;
-  } else {
-    return 1;
-  }
+  var upperCase = confirm(
+    "How about Uppercase? Would you like it to be in the password?"
+  );
+  console.log(upperCase);
 }
 
 // are we using special characters?
 function useSpecialChar() {
-  if (
-    confirm(
-      "Specials!! They are great for security, would you like blend some?"
-    )
-  ) {
-    return 0;
-  } else {
-    return 1;
-  }
+  var specialChar = confirm(
+    "Specials!! They are great for security, would you like blend some?"
+  );
+  console.log(specialChar);
 }
 
 // are we using numerical characters?
 function useNumChar() {
-  if (confirm("Numerical? Would you like to mix them into the password?")) {
-    return 0;
-  } else {
-    return 1;
-  }
+  var numChar = confirm(
+    "Numerical? Would you like to mix them into the password?"
+  );
+  console.log(numChar);
 }
 
 // based on the chosen length select random characters from the chosen characters set and put them in the password
