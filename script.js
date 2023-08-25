@@ -1,7 +1,7 @@
-var lowerchar = "abcdefghijklmnopqrstuvwxyz".split("");
-var upperchar = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
-var numChar = "0123456789".split("");
-var specialChar = "~!@#$%^&*()_+-=".split("");
+var lowerchar = "abcdefghijklmnopqrstuvwxyz";
+var upperchar = "abcdefghijklmnopqrstuvwxyz".toUpperCase();
+var numChar = "0123456789";
+var specialChar = "~!@#$%^&*()_+-=";
 
 console.log(lowerchar);
 console.log(upperchar);
@@ -38,11 +38,13 @@ function writePassword() {
   }
   {
     var characterset = "";
-    if (picklowerCase) characterset += lowerchar;
-    if (pickupperCase) characterset += upperchar;
-    if (pickspecialChar) characterset += specialChar;
-    if (picknumChar) characterset += numChar;
+    if (picklowerCase == true) characterset += lowerchar;
+    if (pickupperCase == true) characterset += upperchar;
+    if (pickspecialChar == true) characterset += specialChar;
+    if (picknumChar == true) characterset += numChar;
     console.log(characterset);
+    // var charactersetarray = [characterset];
+    // console.log(charactersetarray);
 
     var password = "";
     for (i = 0; i < Number(passwordL); i++) {
