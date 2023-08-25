@@ -7,6 +7,15 @@ The type of characters to be used, lowercase, uppercase, special characters and 
 You must pick at least one type or it remind you and will restart again.
 
 Yet it will not generate any password, I am still working on it and trying to figure out.
+
+updates:
+With helps from youtube videos and chatgpt, I am able to get it done finally!!!
+It now will generate password per user's choice.
+
+Lesson learned:
+The type of any log is so important. I spent so many hours to figure out it was actually the type issue causing the undesire outputs.
+
+
 Please leave any comments or thoughts, thank you!!!
 
 Below are the links to REPO and the deployed web page.
