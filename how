@@ -1,0 +1,29 @@
+[33mcommit 9aff2347c690f210afe0fa0562deacc46d1dc4a6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Wayne <wayne80361@gmail.com>
+Date:   Thu Aug 24 19:09:41 2023 -0400
+
+    re-write the functions on asking lower, upper, special, numerical characters.
+
+[33mcommit 560e04c46eca698cd013fbab9b7e06c796856946[m
+Author: Wayne <wayne80361@gmail.com>
+Date:   Thu Aug 24 18:48:34 2023 -0400
+
+    add functions asking Uppercase, Special, and Numberical characters.
+
+[33mcommit 3d871cb17e962eb573229dd5fa6323ac5b53c3c0[m
+Author: Wayne <wayne80361@gmail.com>
+Date:   Thu Aug 24 18:35:23 2023 -0400
+
+    add three global variable for characters.
+
+[33mcommit f11f1c880d39beaff53e4ef96d1dff24684ce740[m
+Author: Wayne <wayne80361@gmail.com>
+Date:   Thu Aug 24 18:26:33 2023 -0400
+
+    function ask password length and lowercase.
+
+[33mcommit 3b540c6c0cd89b6a4594b4561bd1e327e386bdad[m
+Author: Wayne <wayne80361@gmail.com>
+Date:   Thu Aug 24 17:52:58 2023 -0400
+
+    clone develop folder, and added Pseudo Codes in class.
