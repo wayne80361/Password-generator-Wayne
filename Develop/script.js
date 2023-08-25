@@ -18,6 +18,9 @@ function writePassword() {
 
   var userspicks = [picklowerCase, pickupperCase, pickspecialChar, picknumChar];
 
+  // if ((userspicks = [true, true, true, true])) {
+  //   return password;
+  // }
   if (
     picklowerCase == false &&
     pickupperCase == false &&
@@ -26,10 +29,6 @@ function writePassword() {
   ) {
     alert("Please choose at least one type");
     return writePassword();
-  } else console.log(userspicks);
-
-  if ((userspicks = [true, true, true, true])) {
-    return "yes";
   }
 
   var passwordText = document.querySelector("#password");
