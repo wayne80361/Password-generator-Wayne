@@ -1,8 +1,11 @@
-var alphabetChar = "abcdefghijklmnopqrstuvwxyz".split("");
-console.log(alphabetChar);
+var lowerchar = "abcdefghijklmnopqrstuvwxyz".split("");
+var upperchar = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
 var numChar = "0123456789".split("");
-console.log(numChar);
 var specialChar = "~!@#$%^&*()_+-=".split("");
+
+console.log(lowerchar);
+console.log(upperchar);
+console.log(numChar);
 console.log(specialChar);
 
 // Assignment Code
@@ -10,13 +13,16 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var passwordL = getlength();
+
   var picklowerCase = uselowerCase();
   var pickupperCase = useUpperCase();
   var pickspecialChar = useSpecialChar();
   var picknumChar = useNumChar();
 
-  var userspicks = [picklowerCase, pickupperCase, pickspecialChar, picknumChar];
+  // var userspicks = [
+  //   "picklowerCase + pickupperCase + pickspecialChar + picknumChar;",
+  // ];
 
   // if ((userspicks = [true, true, true, true])) {
   //   return password;
@@ -30,13 +36,44 @@ function writePassword() {
     alert("Please choose at least one type");
     return writePassword();
   }
+  {
+    var characterset = "";
+    if (picklowerCase) characterset += lowerchar;
+    if (pickupperCase) characterset += upperchar;
+    if (pickspecialChar) characterset += specialChar;
+    if (picknumChar) characterset += numChar;
+    console.log(characterset);
+
+    var password = "";
+    for (i = 0; i <= passwordL; i++) {
+      var random = Math.floor(Math.random() * characterset.length);
+      password += random;
+
+      console.log(passwordL);
+      console.log(typeof passwordL);
+      // password += characterset.charAt(random);
+    }
+    password;
+  }
+  // for (i = 0; i < password.length; i++) {
+  //   password = "";
+  //   password += lowerchar[Math.floor(Math.random() * lowerchar.length)];
+  //   password += lowerchar[Math.floor(Math.random() * lowerchar.length)];
+  //   password += numChar[Math.floor(Math.random() * numChar.length)];
+  //   password += specialChar[Math.floor(Math.random() * specialChar.length)];
+  // }
+
+  // while (password > password.length) {
+  //   password += userspicks;
+  //   [Math.floor(Math.random() * userspicks.length)];
+  // }
 
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
-function generatePassword() {
+function getlength() {
   // do stuff
   // ask how long the password should be?
   var passwordLength = prompt(
@@ -44,10 +81,11 @@ function generatePassword() {
     // check if the password is betweem 8- 128 characters
   );
   if (128 >= passwordLength && passwordLength >= 8) {
+    console.log(passwordLength);
     return passwordLength;
   }
   // --no? ask again
-  return generatePassword();
+  getlength();
 }
 
 // are we using lowercase characters?
