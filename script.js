@@ -45,12 +45,11 @@ function writePassword() {
     console.log(characterset);
 
     var password = "";
-    for (i = 0; i <= passwordL; i++) {
+    for (i = 0; i < Number(passwordL); i++) {
       var random = Math.floor(Math.random() * characterset.length);
-      password += random;
+      password += characterset.charAt(random);
 
-      console.log(passwordL);
-      console.log(typeof passwordL);
+      console.log(Number(passwordL));
       // password += characterset.charAt(random);
     }
     password;
