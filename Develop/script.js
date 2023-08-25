@@ -16,6 +16,16 @@ function writePassword() {
   var userspicks = [picklowerCase, pickupperCase, pickspecialChar, picknumChar];
   console.log(userspicks);
 
+  if (
+    picklowerCase == false &&
+    pickupperCase == false &&
+    pickspecialChar == false &&
+    picknumChar == false
+  ) {
+    alert("Please choose at least one type");
+    return writePassword();
+  }
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
