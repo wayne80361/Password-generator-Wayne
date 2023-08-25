@@ -1,6 +1,9 @@
 var alphabetChar = "abcdefghijklmnopqrstuvwxyz".split("");
+console.log(alphabetChar);
 var numChar = "0123456789".split("");
+console.log(numChar);
 var specialChar = "~!@#$%^&*()_+-=".split("");
+console.log(specialChar);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -14,7 +17,6 @@ function writePassword() {
   var picknumChar = useNumChar();
 
   var userspicks = [picklowerCase, pickupperCase, pickspecialChar, picknumChar];
-  console.log(userspicks);
 
   if (
     picklowerCase == false &&
@@ -24,6 +26,10 @@ function writePassword() {
   ) {
     alert("Please choose at least one type");
     return writePassword();
+  } else console.log(userspicks);
+
+  if ((userspicks = [true, true, true, true])) {
+    return "yes";
   }
 
   var passwordText = document.querySelector("#password");
